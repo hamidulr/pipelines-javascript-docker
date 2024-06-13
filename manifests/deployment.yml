@@ -1,0 +1,19 @@
+apiVersion : apps/v1
+kind: Deployment
+metadata:
+  name: hamidulrjava 
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: hamidulrjava
+  template:
+    metadata:
+      labels:
+        app: hamidulrjava 
+    spec:
+      containers:
+        - name: hamidulrjava 
+          image: akstraining2024.azurecr.io/hamidulrjava
+          ports:
+          - containerPort: 8080
